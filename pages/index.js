@@ -5,7 +5,7 @@ import { MicrophoneIcon, ViewGridIcon } from '@heroicons/react/solid'
 import { SearchIcon } from '@heroicons/react/outline'
 import Footer from '../components/Footer'
 import { useRef } from 'react'
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
 
 
 export default function Home() {
@@ -20,6 +20,7 @@ export default function Home() {
 
     router.push(`/search?term=${term}`);
   }
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <Head>
@@ -61,8 +62,8 @@ export default function Home() {
           <MicrophoneIcon className="h-5 text-gray-500"/>
         </div>
         <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
-          <button onclick={search} className="btn">Google Search</button>
-          <button onclick={search} className="btn">I'm Feeling Lucky</button>
+          <button onClick={search} className="btn">Google Search</button>
+          <button onClick={search} className="btn">I'm Feeling Lucky</button>
         </div>
       </form>
 
