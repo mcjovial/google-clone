@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { MicrophoneIcon, SearchIcon, XIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import Avatar from '../components/Avatar'
+import HeaderOptions from './HeaderOptions';
 
 const Header = () => {
   const router = useRouter();
@@ -51,6 +52,9 @@ const Header = () => {
           url="https://www.mcjovial.dev/static/media/banner_1.d3d8a965.png" 
         />
       </div>
+
+      {/* Header Options */}
+      <HeaderOptions />
     </header>
   )
 }
